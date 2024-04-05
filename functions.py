@@ -33,6 +33,8 @@ def dowloadVideo(on_progress, link, dest_dir):
 
         print(f'\nDownload concluído! {dest_path}')
 
+        return yt, dest_path
+
     except Exception as e:
         print(f'Ocorreu um erro: {e}')
         exit()

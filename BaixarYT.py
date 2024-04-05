@@ -24,14 +24,26 @@ dest_dir = input()
 
 clearTerminal()
 
+print('Aguarde um monento...')
+
 # Verifica se o diretório de destino existe, se não, cria um novo
 
 yt, dest_path = dowloadVideo(on_progress, link, dest_dir)
 
+time.sleep(3)
+
+clearTerminal()
+
 print('Deseja converter o arquivo para MP3? (s/n)')
+
+
 convert = input()
 if(convert.lower() == 's'):
     convert_mp4_to_mp3(dest_path, os.path.join(dest_dir, yt.title + '.mp3'))
     print(f'Arquivo convertido para MP3! {yt.title}.mp3')
+    
 else:
-    print('Ok, download concluído!')
+    clearTerminal()
+    valeuDraw()
+    time.sleep(5)
+    clearTerminal()
