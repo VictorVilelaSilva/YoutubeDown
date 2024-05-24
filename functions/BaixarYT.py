@@ -9,6 +9,7 @@ from functions.desenhos import *
 def initYoutubeDownloader():
     clearTerminal()
 
+    #desenha o tech lead
     takeRandomDraw()
 
     #DELAY DE 2 SEGUNDOS
