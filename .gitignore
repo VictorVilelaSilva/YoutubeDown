@@ -3,3 +3,12 @@ __pycache__
 
 # Ignora todos os arquivos .mp4
 *.mp4
+
+# Ignora todos os arquivos .mp3
+*.mp3
+
+# Ignora todas outras pastas
+*/
+
+# Não ignora a pasta "functions"
+!functions

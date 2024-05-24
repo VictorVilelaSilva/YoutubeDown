@@ -1,13 +1,8 @@
 import os
 from moviepy.editor import VideoFileClip
 from pytube import YouTube
+import sys
 
-def convert_mp4_to_mp3(mp4_file, mp3_file):
-    video_clip = VideoFileClip(mp4_file)
-    audio_clip = video_clip.audio
-    audio_clip.write_audiofile(mp3_file)
-    audio_clip.close()
-    video_clip.close()
 
 def on_progress(stream, chunk, bytes_remaining):
     total_size = stream.filesize
@@ -15,7 +10,7 @@ def on_progress(stream, chunk, bytes_remaining):
     percentage_of_completion = bytes_downloaded / total_size * 100
     print(f'Baixando... {percentage_of_completion:.2f}% completo.', end='\r')
 
-def dowloadVideo(on_progress, link, dest_dir):
+def dowloadVideo(on_progress, link, dest_dir,archive_type):
     try: 
         if(not os.path.exists(dest_dir) and dest_dir != ''):
             os.makedirs(dest_dir)
@@ -24,6 +19,23 @@ def dowloadVideo(on_progress, link, dest_dir):
 
         # Seleciona o stream de maior qualidade
         ys = yt.streams.get_highest_resolution()
+
+        if(archive_type == '2'):
+            ys = yt.streams.filter(only_audio=True).first()
+
+            # Começa o download
+            arquivo = ys.download(output_path=dest_dir, filename=ys.default_filename)
+
+            #troca o nome do arquivo para mp3
+            base, ext = os.path.splitext(arquivo) 
+            novo_arquivo = base + '.mp3'
+            os.rename(arquivo, novo_arquivo)
+
+            dest_path = os.path.join(dest_dir, os.path.basename(novo_arquivo))
+            
+            print(f'\nDownload concluído! {dest_path}')
+
+            return yt, dest_path
 
         # Define o caminho completo para o arquivo de destino
         dest_path = os.path.join(dest_dir, ys.default_filename)
@@ -38,6 +50,7 @@ def dowloadVideo(on_progress, link, dest_dir):
     except Exception as e:
         print(f'Ocorreu um erro: {e}')
         exit()
+        
 
 def clearTerminal():
     os.system('cls' if os.name == 'nt' else 'clear')
