@@ -11,7 +11,9 @@ def on_progress(stream, chunk, bytes_remaining):
     print(f'Baixando... {percentage_of_completion:.2f}% completo.', end='\r')
 
 def dowloadVideo(on_progress, link, dest_dir,archive_type):
-    try: 
+    try:
+        if(dest_dir != '' and not dest_dir):
+            input('Deseja salvar no mesmo diretório? Pressione Enter para confirmar.')
         if(not os.path.exists(dest_dir) and dest_dir != ''):
             os.makedirs(dest_dir)
 
