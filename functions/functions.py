@@ -1,6 +1,6 @@
 import os
 from moviepy.editor import VideoFileClip
-from pytube import YouTube
+from pytubefix import YouTube
 import sys
 
 

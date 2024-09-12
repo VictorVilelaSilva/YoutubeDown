@@ -1,7 +1,7 @@
 import os
 import time
 from moviepy.editor import VideoFileClip
-from pytube import YouTube
+from pytubefix import YouTube
 from functions.functions import *
 from functions.desenhos import *
 
