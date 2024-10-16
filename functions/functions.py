@@ -5,7 +5,7 @@ from rich.progress import Progress, BarColumn, TextColumn, TimeRemainingColumn
 
 progress = Progress(
     TextColumn("[progress.description]{task.description}"),
-    BarColumn(style="green"),
+    BarColumn(style="red",complete_style="green"),
     TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
     TimeRemainingColumn(),
 )

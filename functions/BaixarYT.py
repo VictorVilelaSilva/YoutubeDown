@@ -5,7 +5,7 @@ import inquirer
 from moviepy.editor import VideoFileClip
 from pytubefix import YouTube
 from functions.functions import on_progress, downloadVideo, clearTerminal
-from functions.desenhos import drawLogo, valeuDraw
+from functions.desenhos import  valeuDraw
 
 def initYoutubeDownloader():
     reload = True
@@ -45,8 +45,6 @@ def initYoutubeDownloader():
 
         clearTerminal()
 
-        print("Aguarde um momento...")
-
         yt, dest_path = downloadVideo(on_progress, link, dest_dir, archive_type)
 
         time.sleep(2)
@@ -56,7 +54,7 @@ def initYoutubeDownloader():
             [
                 inquirer.List(
                     "play",
-                    message="Deseja reproduzir o vídeo baixado?",
+                    message="Deseja baixar outro vídeo ?",
                     choices=["Sim", "Não"],
                 )
             ]
