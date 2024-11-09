@@ -63,4 +63,5 @@ def initYoutubeDownloader():
             reload = False
         clearTerminal()
     valeuDraw()
+    clearTerminal()
     time.sleep(3)
