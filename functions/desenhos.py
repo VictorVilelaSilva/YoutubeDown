@@ -1,6 +1,8 @@
 
 import os
 
+from functions.functions import clearTerminal
+
 
 def drawLogo():
     print("######################################################################################################################")  
@@ -34,6 +36,8 @@ def valeuDraw():
     print(r"    `MM A'       AbmmmqMA     MM      ,   MM   Y  ,     MM       M     ")
     print(r"     :MM;       A'     VML    MM     ,M   MM     ,M     YM.     ,M     ")
     print(r'      VF      .AMA.   .AMMA..JMMmmmmMMM .JMMmmmmMMM      `bmmmmd"      ')
+
+    clearTerminal()
                                                                   
                                                                   
 

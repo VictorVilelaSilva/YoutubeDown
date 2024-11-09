@@ -20,7 +20,21 @@ Este projeto permite aos usuários baixar vídeos do YouTube utilizando a biblio
     ```sh
     cd YoutubeDown
     ```
-3. Instale as dependências necessárias:
+3. Crie um ambiente virtual:
+    ```sh
+    python -m venv venv
+    ```
+4. Ative o ambiente virtual:
+- Windows:
+    ```sh
+    venv\Scripts\activate
+    ```
+- Linux:
+    ```sh
+    source venv/bin/activate
+    ```
+
+5. Instale as dependências necessárias:
     ```sh
     pip install -r requirements.txt
     ```
