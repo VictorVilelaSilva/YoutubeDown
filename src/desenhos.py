@@ -1,8 +1,5 @@
-
 import os
-
-from functions.functions import clearTerminal
-
+from .functions import clearTerminal   # alterado para importação relativa
 
 def drawLogo():
     print("######################################################################################################################")  
@@ -14,8 +11,6 @@ def drawLogo():
     print("####        `--'     `---'   `----'     `--'     `----'   `---'   `----' `-------'   `---'  '--'   '--' `--''--'  ####") 
     print("######################################################################################################################")                                                                                                         
     print("######################################################################################################################")                                                                                                         
-
-
                   
 def valeuDraw():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -36,18 +31,17 @@ def valeuDraw():
     print(r"    `MM A'       AbmmmqMA     MM      ,   MM   Y  ,     MM       M     ")
     print(r"     :MM;       A'     VML    MM     ,M   MM     ,M     YM.     ,M     ")
     print(r'      VF      .AMA.   .AMMA..JMMmmmmMMM .JMMmmmmMMM      `bmmmmd"      ')
-
     clearTerminal()
-                                                                  
-                                                                  
 
-    
-                             
-                                                                                          
-                                                                                          
-                                                                                          
-                                                                                          
-                                                                                          
-                                                                                          
-                                                                                          
-                                                                                          
+
+
+
+
+
+
+
+
+
+
+
+

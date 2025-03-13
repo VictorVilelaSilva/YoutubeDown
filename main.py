@@ -1,5 +1,8 @@
-import functions.BaixarYT as BaixarYT
+import sys
+import os
+
+
+from src.BaixarYT import initYoutubeDownloader
 
 if __name__ == '__main__':
-
-    BaixarYT.initYoutubeDownloader()
+    initYoutubeDownloader()

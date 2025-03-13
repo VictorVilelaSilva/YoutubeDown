@@ -1,11 +1,9 @@
-from importlib import reload
-import os
 import time
 import inquirer
-from moviepy.editor import VideoFileClip
-from pytubefix import YouTube
-from functions.functions import on_progress, downloadVideo, clearTerminal
-from functions.desenhos import  valeuDraw
+from .desenhos import valeuDraw
+from .functions import clearTerminal,downloadVideo,on_progress
+
+
 
 def initYoutubeDownloader():
     reload = True

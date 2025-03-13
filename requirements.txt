@@ -19,7 +19,7 @@ proglog==0.1.10
 pydub==0.25.1
 Pygments==2.18.0
 pytube==15.0.0
-pytubefix==8.1.1
+pytubefix==8.12.2
 readchar==4.2.0
 requests==2.32.3
 rich==13.9.2

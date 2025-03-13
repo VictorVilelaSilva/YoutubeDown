@@ -11,4 +11,4 @@ __pycache__
 */
 
 # Não ignora a pasta "functions"
-!functions
+!src

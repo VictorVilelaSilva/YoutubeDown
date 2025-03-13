@@ -1,6 +1,5 @@
 import os
 from pytubefix import YouTube
-from functions.desenhos import drawLogo
 from rich.progress import Progress, BarColumn, TextColumn, TimeRemainingColumn
 
 progress = Progress(
@@ -73,4 +72,5 @@ def downloadVideo(on_progress, link, dest_dir, archive_type):
 
 def clearTerminal():
     os.system('cls' if os.name == 'nt' else 'clear')
+    from .desenhos import drawLogo   # import local para evitar ciclo
     drawLogo()
